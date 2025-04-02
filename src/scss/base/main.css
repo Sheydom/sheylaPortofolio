@@ -1,0 +1,306 @@
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #D63333;
+  color: #FFFFFF;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  font-size: 0.8rem;
+}
+
+.header {
+  background: #D63333;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  z-index: 1000;
+  transition: ease-in-out 0.3s;
+}
+.header ul {
+  justify-content: flex-end;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+.header li {
+  list-style: none;
+  cursor: pointer;
+}
+.header a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.header a:hover {
+  color: #00FFFF;
+}
+.header a:focus {
+  outline: 3px solid #00FFFF;
+}
+.header .hamburgerMenu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  border: 2px solid black;
+}
+.header .hamburgerMenu span {
+  background-color: black;
+  width: 30px;
+  height: 4px;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+  }
+  .nav .nav__list {
+    display: none;
+  }
+  .nav .show {
+    display: flex;
+  }
+  .nav .hamburgerMenu {
+    display: flex;
+    margin-right: 20px;
+  }
+}
+h1 {
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  animation: grow_form 2s ease-in;
+  flex-direction: column;
+  width: 300px;
+}
+
+.cdiv {
+  display: flex;
+  flex-direction: row;
+  animation: rotat 2s ease-in;
+}
+.cdiv input {
+  background-color: white;
+  opacity: 0.5;
+  width: 60%;
+}
+
+textarea {
+  text-align: center;
+  resize: none;
+  width: 100%;
+  display: block;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.textarea_label {
+  width: 100%;
+}
+
+@keyframes grow_form {
+  0% {
+    transform: scale(0.1);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotat {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+button:focus, input:focus, textarea:focus {
+  outline: 3px solid #00FFFF;
+  opacity: 1;
+}
+
+button:focus {
+  outline: 3px solid #00FFFF;
+}
+
+.bio button {
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+.bio button:hover {
+  background-color: #00FFFF;
+}
+.bio__button--bright {
+  background-color: white;
+  color: black;
+}
+.bio__button--dark {
+  background-color: black;
+  color: white;
+}
+.bio__button--dark:hover {
+  color: black;
+}
+
+main button {
+  background-color: #332E2E;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+main button:hover {
+  background-color: #00FFFF;
+  color: black;
+}
+
+form button {
+  padding: 10px;
+  color: white;
+}
+
+* {
+  font-family: poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #332E2E;
+  align-items: center;
+  justify-items: center;
+}
+.bio .bio__img--profile {
+  width: 350px;
+  height: 350px;
+}
+.bio article {
+  width: 350px;
+  height: 350px;
+  background-image: url("https://sheydom.github.io/Portfolio-Site/assets/IMG_2782.jpeg");
+  background-size: cover;
+}
+
+.main__ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  color: #00FFFF;
+  list-style: none;
+  flex-direction: column;
+}
+
+.main__li {
+  padding: 5px;
+}
+
+.main__h1--bright {
+  color: #00FFFF;
+}
+
+.bio__div--backdropfilter {
+  padding: 10px;
+  font-weight: bold;
+  background: rgba(192, 212, 11, 0.5);
+  backdrop-filter: contrast(1) blur(5px);
+  text-align: center;
+}
+
+.bio__p--justify {
+  height: auto;
+  text-align: start;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  background-color: #8A7AE4;
+  display: flex;
+  justify-content: center;
+}
+main img {
+  object-fit: cover;
+  max-width: 350px;
+  height: 350px;
+  border-radius: 0 80px 0 80px;
+}
+main p, main h2, main a {
+  color: #00FFFF;
+}
+main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  background-color: #332E2E;
+  border-radius: 30px 0 30px 0;
+  margin: 30px;
+  box-shadow: 8px 8px 8px;
+  transition: ease-in-out 0.3s;
+}
+
+.mainone {
+  transition: ease-in-out 0.3s;
+}
+
+.shrink {
+  transform: scaleY(0.8);
+}
+
+@media (min-width: 768px) {
+  .bio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+  }
+  .bio__img--profile {
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+  }
+  .latestprojects {
+    text-align: center;
+    width: 100%;
+  }
+  .article__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    justify-items: center;
+  }
+}
