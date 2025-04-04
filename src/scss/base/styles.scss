@@ -1,0 +1,77 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+@use "../blocks/footer.scss" as *;
+@use "../blocks/header" as *;
+
+* {
+  font-family: poppins, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  border: 5px solid black;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  &__imgdiv {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__textdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 500px;
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+    font-size: $h1size;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+}
+
+.projects {
+  display: flex;
+  border: 2px solid green;
+  justify-content: center;
+  max-width: 80vw;
+  flex: 1;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+  &__content--grid {
+    display: flex;
+    width: 300px;
+    height: 250px;
+    border: 2px solid black;
+  }
+}
