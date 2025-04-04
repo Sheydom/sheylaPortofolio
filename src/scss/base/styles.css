@@ -9,7 +9,7 @@ footer {
 }
 
 .header {
-  background: #D63333;
+  background: #548f7d;
   width: 100%;
   display: flex;
   position: fixed;
@@ -104,7 +104,6 @@ body {
 .hero {
   display: flex;
   width: 100%;
-  border: 5px solid black;
   justify-content: center;
 }
 .hero__content {
@@ -133,10 +132,26 @@ body {
 .hero__text {
   margin-bottom: 1rem;
 }
+.hero__button--contact {
+  background-color: #f7a542;
+  width: 50%;
+  padding: 10px 50px;
+  font-weight: bold;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(247, 165, 66, 0.7);
+  transition: transform 0.3s ease-in-out;
+}
+.hero__button--contact:hover {
+  box-shadow: 0 0 15px rgb(247, 165, 66);
+}
+.hero__button--contact:active {
+  transform: scale(0.9);
+}
 
 .projects {
   display: flex;
-  border: 2px solid green;
   justify-content: center;
   max-width: 80vw;
   flex: 1;
@@ -150,4 +165,45 @@ body {
   width: 300px;
   height: 250px;
   border: 2px solid black;
+}
+
+.flip-card {
+  width: 300px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  border-radius: 12px;
+  transform: rotateY(180deg);
+  box-shadow: 0 0 15px rgb(247, 165, 66);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: #f5f5f5;
 }
