@@ -188,6 +188,10 @@ body {
   box-shadow: 0 0 15px rgb(247, 165, 66);
 }
 
+.flip-card.expanded .flip-card-inner {
+  transform: rotateY(180deg); /* Keep it flipped */
+}
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;
