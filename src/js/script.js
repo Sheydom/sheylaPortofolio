@@ -19,13 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const projectCards = document.querySelectorAll(".flip-card");
 const projectsBtns = document.querySelectorAll(".projects__button");
+const moreInformation = document.querySelector(".moreInformation");
 
 projectsBtns.forEach((btn, index) => {
   btn.addEventListener("click", (event) => {
     event.stopPropagation(); // Prevent the click from triggering other events
+    moreInformation.classList.toggle("show");
     const projectCard = projectCards[index];
     projectCard.classList.toggle("expanded");
-    projectCard.classList.toggle("flipped");
+   
 
     const headerHeight = document.querySelector(".header").offsetHeight;
     const cardPosition =
