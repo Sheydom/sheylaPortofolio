@@ -45,7 +45,7 @@ projectsBtns.forEach((btn, index) => {
     // Scroll to the card position minus the header height
     window.scrollTo({
       top: cardPosition - headerHeight,
-      behavior: "smooth",
+      behavior: "instant",
     });
 
     const expandedTiles = document.querySelectorAll(".flip-card.expanded");
@@ -60,7 +60,7 @@ projectsBtns.forEach((btn, index) => {
       window.scrollTo({
         top:
           projectsSection.getBoundingClientRect().top + window.scrollY - offset,
-        behavior: "smooth",
+        behavior: "instant",
       });
     }
   });
