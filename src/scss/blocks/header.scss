@@ -2,6 +2,7 @@
 @use "../utils/variables" as *;
 .header {
   background: #548f7d;
+  height: 4rem;
   width: 100%;
   display: flex;
   position: fixed;
@@ -9,7 +10,7 @@
   justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 1000;
-  transition: ease-in-out 0.3s;
+  transition: ease-out 0.3s;
   overflow: hidden;
   &__homeS {
     margin-left: 1rem;

@@ -1,7 +1,7 @@
 footer {
   display: flex;
   justify-content: center;
-  background-color: #D63333;
+  background-color: #548f7d;
   color: #FFFFFF;
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -10,6 +10,7 @@ footer {
 
 .header {
   background: #548f7d;
+  height: 4rem;
   width: 100%;
   display: flex;
   position: fixed;
@@ -17,7 +18,7 @@ footer {
   justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 1000;
-  transition: ease-in-out 0.3s;
+  transition: ease-out 0.3s;
   overflow: hidden;
 }
 .header__homeS {
@@ -83,6 +84,109 @@ footer {
     color: black;
   }
 }
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #64ccc5;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+}
+.contact__header span {
+  color: white;
+}
+.contact__span {
+  color: #64ccc5;
+}
+.contact__article {
+  padding: 4rem;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #04364a;
+  color: white;
+}
+.contact__article h2 {
+  line-height: 2rem;
+}
+.contact__article svg {
+  height: 2rem;
+}
+.contact__text {
+  display: flex;
+  flex-direction: column;
+}
+.contact__icons {
+  margin-top: 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  color: #64ccc5;
+}
+.contact__iconDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.contact__iconDiv p {
+  font-size: 1rem;
+  color: white;
+}
+.contact__form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  gap: 10px;
+  margin-left: 2rem;
+}
+.contact__form textarea {
+  resize: none;
+  overflow: auto;
+}
+.contact__form button {
+  background-color: #176b87;
+  color: white;
+  border-radius: 45px;
+  padding: 0.5rem;
+}
+.contact__form input,
+.contact__form textarea {
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+@keyframes grow_form {
+  0% {
+    transform: scale(0.1);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotat {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #00FFFF;
+  opacity: 1;
+}
+
 * {
   font-family: poppins, sans-serif;
   box-sizing: border-box;
@@ -104,6 +208,7 @@ body {
 .hero {
   display: flex;
   width: 100%;
+  transition: padding-top 0.3s ease-in-out;
   justify-content: center;
 }
 .hero__content {
@@ -152,6 +257,7 @@ body {
 
 .projects {
   display: flex;
+  scroll-margin-top: 3rem;
   justify-content: center;
   max-width: 80vw;
   flex: 1;

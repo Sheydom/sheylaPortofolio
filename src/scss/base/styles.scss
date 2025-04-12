@@ -2,6 +2,7 @@
 @use "../utils/variables" as *;
 @use "../blocks/footer.scss" as *;
 @use "../blocks/header" as *;
+@use "../blocks/form" as *;
 
 * {
   font-family: poppins, sans-serif;
@@ -24,7 +25,7 @@ body {
 .hero {
   display: flex;
   width: 100%;
-
+  transition: padding-top 0.3s ease-in-out;
   justify-content: center;
 
   &__content {
@@ -80,7 +81,7 @@ body {
 
 .projects {
   display: flex;
-
+  scroll-margin-top: 3rem;
   justify-content: center;
   max-width: 80vw;
   flex: 1;

@@ -1,75 +1,112 @@
 @use "../utils/mixins" as *;
 @use "../utils/variables" as *;
-h1{
-    margin: 10px
-}
 
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #64ccc5;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
 
-
-
-form{
+  &__header {
+    span {
+      color: white;
+    }
+  }
+  &__span {
+    color: #64ccc5;
+  }
+  &__article {
+    padding: 4rem;
+    border-radius: 10px;
     display: flex;
-    animation: grow_form 2s ease-in;
-    flex-direction: column;
-    width: 300px;
-    
-}
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #04364a;
+    color: white;
+    h2 {
+      line-height: 2rem;
+    }
 
-.cdiv{
+    svg {
+      height: 2rem;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+  &__icons {
+    margin-top: 2rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    color: #64ccc5;
+  }
+  &__iconDiv {
     display: flex;
     flex-direction: row;
-    animation: rotat 2s ease-in;
+    gap: 1rem;
 
-
-    input{
-        background-color:white;
-        opacity: 0.5;
-        width: 60%;
+    p {
+      font-size: 1rem;
+      color: white;
     }
+  }
+  &__form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    gap: 10px;
+    margin-left: 2rem;
+
+    textarea {
+      resize: none;
+      overflow: auto;
+    }
+    button {
+      background-color: #176b87;
+      color: white;
+      border-radius: 45px;
+      padding: 0.5rem;
+    }
+    input,
+    textarea {
+      border-radius: 5px;
+      padding: 0.5rem;
+    }
+  }
 }
 
-textarea{
-    text-align: center;
-    resize: none;
-    width: 100%; 
-    display: block;
-    background-color:white;
-    opacity: 0.5;
-    }
-
-.textarea_label{
-    width: 100%;
+@keyframes grow_form {
+  0% {
+    transform: scale(0.1);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotat {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-
-
-     @keyframes grow_form {
-         0%{
-             transform: scale(0.1);
-          
-         }
-         90%{
-            transform: scale(1.2);
-         }
-         100%{
-             transform: scale(1);
-          
-         }
-     }
-     @keyframes rotat {
-         0%{
-          
-             transform: rotate(90deg);
-         }
-         100%{
-          
-             transform: rotate(360deg);
-          
-                 }
-    }
-
-    button:focus,input:focus,textarea:focus{
-        outline: 3px solid $accent3rd;
-        opacity: 1;
-    }
-    
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid $accent3rd;
+  opacity: 1;
+}

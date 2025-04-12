@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
   fixedHeader();
 
   window.addEventListener("resize", fixedHeader);
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 0) {
+      header.style.height = "2%";
+    } else {
+      header.style.height = "";
+    }
+  });
 });
 
 const projectCards = document.querySelectorAll(".flip-card");
@@ -39,5 +47,21 @@ projectsBtns.forEach((btn, index) => {
       top: cardPosition - headerHeight,
       behavior: "smooth",
     });
+
+    const expandedTiles = document.querySelectorAll(".flip-card.expanded");
+    const expandedTilesCount = expandedTiles.length;
+    if (
+      !projectCard.classList.contains("expanded") &&
+      expandedTilesCount === 0
+    ) {
+      const projectsSection = document.querySelector(".projects");
+      const offset = 100; // Adjust this value as needed
+
+      window.scrollTo({
+        top:
+          projectsSection.getBoundingClientRect().top + window.scrollY - offset,
+        behavior: "smooth",
+      });
+    }
   });
 });
