@@ -16,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", fixedHeader);
   window.addEventListener("scroll", () => {
+    
     const scrollPosition = window.scrollY;
     if (scrollPosition > 0) {
       header.style.height = "2%";
     } else {
       header.style.height = "";
     }
+
   });
 });
 

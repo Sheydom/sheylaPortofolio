@@ -8,7 +8,7 @@
   justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 1000;
-  transition: ease-out 0.3s;
+  transition: ease-in-out 0.3s;
   overflow: hidden;
 }
 .header__homeS {
